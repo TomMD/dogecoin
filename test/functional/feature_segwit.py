@@ -295,10 +295,10 @@ class SegWitTest(BitcoinTestFramework):
         ]
 
         # Import a compressed key and an uncompressed key, generate some multisig addresses
-        self.nodes[0].importprivkey("92e6XLo5jVAVwrQKPNTs93oQco8f8sDNBcpv73Dsrs397fQtFQn")
-        uncompressed_spendable_address = ["mvozP4UwyGD2mGZU4D2eMvMLPB9WkMmMQu"]
-        self.nodes[0].importprivkey("cNC8eQ5dg3mFAVePDX4ddmPYpPbw41r9bm2jd1nLJT77e6RrzTRR")
-        compressed_spendable_address = ["mmWQubrDomqpgSYekvsU7HWEVjLFHAakLe"]
+        self.nodes[0].importprivkey("96Xasoh9SLWxDVZjCXhs3gzxT2N6SGu7kty8bLbfrB3v6u1923j")
+        uncompressed_spendable_address = ["njVCMH5XPd8nQ8qe73hHLAtueBfQ7y5Rui"]
+        self.nodes[0].importprivkey("cfMPnioS2MbX7XfvKfrRE7aXKG1EirPbveGzjvUXHQcYCknGdrNp")
+        compressed_spendable_address = ["naBcspSoE8maKJppomY75Y3okjr8kme8ng"]
         assert not self.nodes[0].getaddressinfo(uncompressed_spendable_address[0])['iscompressed']
         assert self.nodes[0].getaddressinfo(compressed_spendable_address[0])['iscompressed']
 
